@@ -3,7 +3,7 @@ FROM springci/graalvm-ce:stable-java11-0.9.x
 MAINTAINER ad1tya2
 
 RUN apt-get update -y \
- && apt-get install -y curl ca-certificates openssl git tar sqlite fontconfig tzdata iproute2 \
+ && apt-get install -y curl ca-certificates openssl git tar sqlite fontconfig iproute2 \
  && useradd -d /home/container -m container
 
 USER container
