@@ -16,7 +16,7 @@ RUN apt-get update -y \
   && rm -rf /tmp/graalvm.tar.gz \
   && chmod +x /usr/local/bin/slim-java.sh && /usr/local/bin/slim-java.sh /jdk \
   &&  rm -rf /var/lib/apt/lists/* \
-  && apt-get remove -y binutils git && apt autoremove -y && rm -r /jdk/languages /jdk/lib/visualvm /jdk/lib/installer
+  && apt-get remove -y binutils git && apt autoremove -y && rm -rf /jdk/languages /jdk/lib/visualvm /jdk/lib/installer
 
 USER container
 ENV  USER=container HOME=/home/container
